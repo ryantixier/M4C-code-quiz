@@ -1,0 +1,22 @@
+NOTES FROM BEN...
+Word Guess Game
+
+user types a key and i need to check if its part of a random Word
+if yes, display the char in the DOM
+if no, char is not displayed
+
+need to set up a timer and if the user guesses the entire word correctly in the time alloted i increase the score by 1 for wins, if the user guesses incorrectly increase the score for losses by 1
+
+what data do i need to track in the app?
+
+what data structures can i use?
+
+what do i attempt to accomplish first?
+
+how do i choose a random word? where are they stored?  array
+
+var words = ["Indiana Jones", "Jaws", "Shrek" ]   //how do i randomly choose a word
+
+how do i check if the character is part of the random word?
+
+how do i know what key the user pressed?  event listener - keydown
