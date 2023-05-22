@@ -1,5 +1,10 @@
-NOTES FROM BEN...
 Word Guess Game
+
+~~~
+~~~
+~~~
+
+NOTES FROM BEN...
 
 user types a key and i need to check if its part of a random Word
 if yes, display the char in the DOM
@@ -15,8 +20,46 @@ what do i attempt to accomplish first?
 
 how do i choose a random word? where are they stored?  array
 
-var words = ["Indiana Jones", "Jaws", "Shrek" ]   //how do i randomly choose a word
+var words = ["Indiana Jones", "Jaws", "Shrek"]   //how do i randomly choose a word
 
 how do i check if the character is part of the random word?
 
 how do i know what key the user pressed?  event listener - keydown
+
+
+~~~
+~~~
+~~~
+
+NOTES FROM JUSTIN...
+
+Divide HTML into 3 sections
+. Intro
+. Quiz
+. Scores 
+
+2 HTML docs
+. index.html
+. highscores.html
+
+Save timer aspect for last
+
+Run tests for questions individually, as you go
+
+Don’t hard code questions into HTML
+. Have an array of objects to keep track of questions/choices/answers
+
+Var questions = [
+{
+Q
+C
+A
+},
+ 
+{
+Q
+C
+A
+},
+]
+
