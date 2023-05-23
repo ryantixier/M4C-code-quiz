@@ -61,17 +61,17 @@ var syntax = [
     ],
     answer: "[ARRAY] i.e. Brackets",
   },
-  //   //   {
-  //   //     question: ,
-  //   //     choices:,
-  //   //     answer:,
-  //   //   },
-  //   //   {
-  //   //     question: ,
-  //   //     choices:,
-  //   //     answer:,
-  //   //   },
-  //   //   {
+  {
+    question: "1",
+    choices: ["1", "2", "3", "4"],
+    answer: "2",
+  },
+  {
+    question: "2",
+    choices: ["1", "2", "3", "4"],
+    answer: "4",
+  },
+  // {
   //   //     question: ,
   //   //     choices:,
   //   //     answer:,
