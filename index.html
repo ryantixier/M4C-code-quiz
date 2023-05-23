@@ -5,11 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DU: M4C Code Quiz</title>
+    <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
-    <section>intro</section>
-    <section>
+    <section id="introduction">
+      <h1>introduction</h1>
+      <button id="start">Start Quiz</button>
+    </section>
+    <section class="hide" id="quiz">
       quiz
+      <h2 id="question"></h2>
+      <button class="btn" id="0"></button>
+      <button class="btn" id="1"></button>
+      <button class="btn" id="2"></button>
+      <button class="btn" id="3"></button>
       <!-- definitions x 5 -->
       <!-- definitions x 5 -->
       <!-- definitions x 5 -->
@@ -22,7 +31,7 @@
       <!-- syntax x 5 -->
       <!-- random bonus question -->
     </section>
-    <section>high score input field</section>
+    <section class="hide" id="score-form">high score input field</section>
     <script src="./assets/script.js"></script>
   </body>
 </html>
