@@ -4,8 +4,11 @@
 // // QUERY SELECTORS
 // // QUERY SELECTORS
 //
+
+// NOTE: variable bound to the event listener used to begin running the quiz
 var startButton = document.getElementById("start");
-// create variables for 3 HTML sections
+
+// NOTE: variables for each of the 3 HTML sections
 var introduction = document.getElementById("introduction");
 var quiz = document.getElementById("quiz");
 var scoreForm = document.getElementById("score-form");
@@ -15,6 +18,7 @@ var scoreForm = document.getElementById("score-form");
 // // INDECES/VARIABLES
 //
 
+// NOTE: quiz questions comprise of "definitions" questions, "syntax" questions, and "bonus" questions
 var definitions = [
   {
     question: "DOM is an ackronym for...",
@@ -47,8 +51,6 @@ var definitions = [
   //     answer:,
   //   }
 ];
-
-// console.log(definitions[0].answer);
 
 var syntax = [
   {
@@ -85,8 +87,11 @@ var syntax = [
 
 var bonus = []; // same syntax as above
 
+// NOTE: question categories merged into a single variable
 var allQuestions = [...definitions, ...syntax, ...bonus];
 
+// NOTE: sets the starting point of the each question catergory to the 0 index
+// ... : to be used for iteration through var allQuestions during quiz
 var questionIndex = 0;
 
 // // FUNCTIONS
@@ -94,11 +99,15 @@ var questionIndex = 0;
 // // FUNCTIONS
 //
 
+// NOTE: function will run upon click (event)
 function startQuiz(event) {
   event.preventDefault();
   introduction.classList.add("hide");
+  // ... : will hide HTML introductory section
   quiz.classList.remove("hide");
+  // ... : will reveal HTML quiz section
   selectQuestion();
+  // triggers the JS function to run the quiz
 }
 
 function selectQuestion() {
