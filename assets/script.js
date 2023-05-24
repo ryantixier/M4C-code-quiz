@@ -85,7 +85,32 @@ var syntax = [
   //   //   },
 ];
 
-var bonus = []; // same syntax as above
+var bonus = [
+  {
+    question: "0",
+    choices: ["1", "2", "3", "4"],
+    answer: "3",
+  },
+  {
+    question: "1",
+    choices: ["1", "2", "3", "4"],
+    answer: "2",
+  },
+  {
+    question: "2",
+    choices: ["1", "2", "3", "4"],
+    answer: "4",
+  },
+  // {
+  //   //     question: ,
+  //   //     choices:,
+  //   //     answer:,
+  //   //   },
+  //   //   {
+  //   //     question: ,
+  //   //     choices:,
+  //   //     answer:,
+]; // same syntax as above
 
 // NOTE: question categories merged into a single variable
 var allQuestions = [...definitions, ...syntax, ...bonus];
@@ -107,9 +132,12 @@ function startQuiz(event) {
   quiz.classList.remove("hide");
   // ... : will reveal HTML quiz section
   selectQuestion();
-  // triggers the JS function to run the quiz
+  // ... : triggers the JS function to run the quiz
 }
 
+// ADD NOTES // ADD NOTES // ADD NOTES //
+// ADD NOTES // ADD NOTES // ADD NOTES //
+// ADD NOTES // ADD NOTES // ADD NOTES //
 function selectQuestion() {
   var currentQuestion = allQuestions[questionIndex];
   document.getElementById("question").textContent = currentQuestion.question;
@@ -119,16 +147,21 @@ function selectQuestion() {
     btn.textContent = choice;
     btn.addEventListener("click", choiceClick);
   }
-  //   console.log(currentQuestion);
+  // console.log(currentQuestion);
 }
 
+// ADD NOTES // ADD NOTES // ADD NOTES //`
+// ADD NOTES // ADD NOTES // ADD NOTES //
+// ADD NOTES // ADD NOTES // ADD NOTES //
 function choiceClick(event) {
   event.preventDefault();
   var choice = event.target.id;
-  // check answer (right/wrong); compare choice to answer
-  // increase val of q index + 1
-  // recall selectQuestion
-  console.log(choice);
+
+  // to-do: check answer (right/wrong); compare choice to answer
+  // to-do: increase val of q index + 1
+  // to-do: recall selectQuestion
+
+  // console.log(choice);
 }
 
 // // COMMANDS
@@ -136,7 +169,7 @@ function choiceClick(event) {
 // // COMMANDS
 //
 
-// Upon visiting the page, introductory alert
+// NOTE: introductory alert; displays upon visiting the page
 alert(
   "¡Bienvenidos! Ready to test your JavaScript knowledge? Click 'Start Quiz' and see if you can beat the high score!"
 );
@@ -146,4 +179,5 @@ alert(
 // // EVENT LISTENERS
 //
 
+// NOTE: connects JS code to the HTML start button; triggers the function to begin the quiz
 startButton.addEventListener("click", startQuiz);
