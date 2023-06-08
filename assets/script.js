@@ -62,6 +62,7 @@ var syntax = [
       "(ARRAY) i.e. Parentheses",
     ],
     answer: "[ARRAY] i.e. Brackets",
+    // answer: 1,
   },
   {
     question: "1",
@@ -142,11 +143,13 @@ function startQuiz(event) {
 // js function to begin quiz
 function selectQuestion() {
   var currentQuestion = allQuestions[questionIndex];
-  // will display a given question
+  // will display a given question on the page
   document.getElementById("question").textContent = currentQuestion.question;
   // ties html question id to display text of
   for (let i = 0; i < currentQuestion.selections.length; i++) {
+    // iterates through items in 'selections'
     var choice = currentQuestion.selections[i];
+    // creates variable 'choice' to separate each individual item in the array
     var btn = document.getElementById(i);
     btn.textContent = choice;
     btn.addEventListener("click", choiceClick);
@@ -160,26 +163,32 @@ function selectQuestion() {
 function choiceClick(event) {
   event.preventDefault();
   var choice = event.target.id;
-  console.log(choice);
-  if (choice === answer) {
-    selectQuestion(allQuestions[questionIndex + 1]);
-    // next question
-    // no time subtracted
+  var answerKey = allQuestions[questionIndex];
+  // console.log(choice)
+  // console.log(currentQues)
+  // console.log(typeof choice); // var choice was a string
+  // console.log(typeof currentQuestion.answer); // var currentQuestion.answer was a number
+  if (parseInt(choice) === answerKey.answer) {
+    // parseInt to convert string to number value; if strictly equal...
+    console.log("yayyyyy"); // ~it worked...~
+    selectQuestion(questionIndex++);
+    // recalls function selectQuestion to bring up the next question in the quiz...
+    // ... i.e. presents the following item in allQuestions object array
+    // > no time subtracted <
   } else {
-    return selectQuestion();
-    // subtract 10 seconds
+    console.log("booooo");
+    selectQuestion(questionIndex++);
     // next question
+    // TO-DO: subtract 10 seconds
   }
-  // for (i = )
-  //
-  //
-  // to-do: check answer (right/wrong); compare choice to answer
-  // var answerKey
-  // to-do: increase val of q index + 1
-  // to-do: recall selectQuestion
-
-  // console.log(choice);
 }
+//
+//
+// var answerKey
+// to-do: increase val of q index + 1
+// to-do: recall selectQuestion
+
+// console.log(choice);
 
 // // COMMANDS
 // // COMMANDS
