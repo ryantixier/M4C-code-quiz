@@ -22,32 +22,32 @@ var scoreForm = document.getElementById("score-form");
 var definitions = [
   {
     question: "DOM is an ackronym for...",
-    choices: [
+    selections: [
       "Do-Over Machine",
       "Dubious Origami Men",
       "Document Object Model",
       "Taco",
     ],
-    answer: "Document Object Model",
+    answer: 2,
   },
   {
     question: "1",
-    choices: ["1", "2", "3", "4"],
+    selections: ["1", "2", "3", "4"],
     answer: "2",
   },
   {
     question: "2",
-    choices: ["1", "2", "3", "4"],
+    selections: ["1", "2", "3", "4"],
     answer: "4",
   },
   //   {
   //     question: ,
-  //     choices:,
+  //     selections:,
   //     answer:,
   //   }
   //   {
   //     question: ,
-  //     choices:,
+  //     selections:,
   //     answer:,
   //   }
 ];
@@ -55,7 +55,7 @@ var definitions = [
 var syntax = [
   {
     question: "What is the appropriate syntax to denote an array?",
-    choices: [
+    selections: [
       "Taco",
       "[ARRAY] i.e. Brackets",
       "{ARRAY} i.e. Curly Brackets",
@@ -65,22 +65,22 @@ var syntax = [
   },
   {
     question: "1",
-    choices: ["1", "2", "3", "4"],
+    selections: ["1", "2", "3", "4"],
     answer: "2",
   },
   {
     question: "2",
-    choices: ["1", "2", "3", "4"],
+    selections: ["1", "2", "3", "4"],
     answer: "4",
   },
   // {
   //   //     question: ,
-  //   //     choices:,
+  //   //     selections:,
   //   //     answer:,
   //   //   },
   //   //   {
   //   //     question: ,
-  //   //     choices:,
+  //   //     selections:,
   //   //     answer:,
   //   //   },
 ];
@@ -88,27 +88,27 @@ var syntax = [
 var bonus = [
   {
     question: "0",
-    choices: ["1", "2", "3", "4"],
+    selections: ["1", "2", "3", "4"],
     answer: "3",
   },
   {
     question: "1",
-    choices: ["1", "2", "3", "4"],
+    selections: ["1", "2", "3", "4"],
     answer: "2",
   },
   {
     question: "2",
-    choices: ["1", "2", "3", "4"],
+    selections: ["1", "2", "3", "4"],
     answer: "4",
   },
   // {
   //   //     question: ,
-  //   //     choices:,
+  //   //     selections:,
   //   //     answer:,
   //   //   },
   //   //   {
   //   //     question: ,
-  //   //     choices:,
+  //   //     selections:,
   //   //     answer:,
 ]; // same syntax as above
 
@@ -138,11 +138,15 @@ function startQuiz(event) {
 // ADD NOTES // ADD NOTES // ADD NOTES //
 // ADD NOTES // ADD NOTES // ADD NOTES //
 // ADD NOTES // ADD NOTES // ADD NOTES //
+
+// js function to begin quiz
 function selectQuestion() {
   var currentQuestion = allQuestions[questionIndex];
+  // will display a given question
   document.getElementById("question").textContent = currentQuestion.question;
-  for (let i = 0; i < currentQuestion.choices.length; i++) {
-    var choice = currentQuestion.choices[i];
+  // ties html question id to display text of
+  for (let i = 0; i < currentQuestion.selections.length; i++) {
+    var choice = currentQuestion.selections[i];
     var btn = document.getElementById(i);
     btn.textContent = choice;
     btn.addEventListener("click", choiceClick);
@@ -156,8 +160,21 @@ function selectQuestion() {
 function choiceClick(event) {
   event.preventDefault();
   var choice = event.target.id;
-
+  console.log(choice);
+  if (choice === answer) {
+    selectQuestion(allQuestions[questionIndex + 1]);
+    // next question
+    // no time subtracted
+  } else {
+    return selectQuestion();
+    // subtract 10 seconds
+    // next question
+  }
+  // for (i = )
+  //
+  //
   // to-do: check answer (right/wrong); compare choice to answer
+  // var answerKey
   // to-do: increase val of q index + 1
   // to-do: recall selectQuestion
 
