@@ -39,42 +39,37 @@ var definitions = [
     answer: 2,
   },
   {
-    question: "1",
-    selections: ["1", "2", "3", "4"],
-    answer: 2,
-  },
-  {
-    question: "2",
-    selections: ["1", "2", "3", "4"],
+    question: "Which method(s) can be used to combine multiple arrays?",
+    selections: [
+      "The merge method i.e. [... array1, ...array2, ...array3]",
+      "The concatenation method i.e. .concat(array1, array2, array3)",
+      "Taco i.e. .taco()",
+      "The first two choices are correct; 'Taco' does nothing but bring joy to people in real life",
+    ],
     answer: 3,
   },
   {
-    question: "2",
-    selections: ["1", "2", "3", "4"],
-    answer: 0,
+    question: "A string can be utilized to repreesent which kind of data?",
+    selections: [
+      "An integer, without quotes",
+      "A line of text",
+      "A boolean value",
+      "Taco(s) value i.e. priceless",
+    ],
+    answer: 1,
   },
   {
-    question: "2",
-    selections: ["1", "2", "3", "4"],
+    question: "Which datatype returns values of true/false?",
+    selections: ["Boolean", "Number", "String", "Le taco"],
     answer: 0,
   },
-  //   {
-  //     question: ,
-  //     selections:,
-  //     answer:,
-  //   }
-  //   {
-  //     question: ,
-  //     selections:,
-  //     answer:,
-  //   }
 ];
 
 var syntax = [
   {
     question: "What is the appropriate syntax to denote an array?",
     selections: [
-      "Taco",
+      "'taco' ie. 'taco'",
       "[ARRAY] i.e. Brackets",
       "{ARRAY} i.e. Curly Brackets",
       "(ARRAY) i.e. Parentheses",
@@ -83,24 +78,27 @@ var syntax = [
     // answer: 1,
   },
   {
-    question: "1",
-    selections: ["1", "2", "3", "4"],
-    answer: 0,
-  },
-  {
-    question: "2",
-    selections: ["1", "2", "3", "4"],
+    question:
+      "A line of completed code must be followed by which character to denote the line's end?",
+    selections: [
+      ", i.e. comma",
+      "; i.e. semicolon",
+      "! i.e. exclamation point",
+      "'taco' ie. 'taco'",
+    ],
     answer: 1,
   },
   {
-    question: "2",
-    selections: ["1", "2", "3", "4"],
-    answer: 3,
+    question:
+      "When referencing an index position, the index will always start at which number?",
+    selections: ["0", "1", "2", "Taco"],
+    answer: 0,
   },
   {
-    question: "2",
-    selections: ["1", "2", "3", "4"],
-    answer: 2,
+    question:
+      "The code line... var newVariable = ''; ...will create a new variable with the value of...",
+    selections: ["Numbers 1-9", "The alphabet", "Taco!", "An empty string"],
+    answer: 3,
   },
 ];
 
