@@ -48,6 +48,16 @@ var definitions = [
     selections: ["1", "2", "3", "4"],
     answer: 3,
   },
+  {
+    question: "2",
+    selections: ["1", "2", "3", "4"],
+    answer: 0,
+  },
+  {
+    question: "2",
+    selections: ["1", "2", "3", "4"],
+    answer: 0,
+  },
   //   {
   //     question: ,
   //     selections:,
@@ -75,50 +85,36 @@ var syntax = [
   {
     question: "1",
     selections: ["1", "2", "3", "4"],
-    answer: 2,
+    answer: 0,
+  },
+  {
+    question: "2",
+    selections: ["1", "2", "3", "4"],
+    answer: 1,
   },
   {
     question: "2",
     selections: ["1", "2", "3", "4"],
     answer: 3,
   },
-  // {
-  //   //     question: ,
-  //   //     selections:,
-  //   //     answer:,
-  //   //   },
-  //   //   {
-  //   //     question: ,
-  //   //     selections:,
-  //   //     answer:,
-  //   //   },
+  {
+    question: "2",
+    selections: ["1", "2", "3", "4"],
+    answer: 2,
+  },
 ];
 
 var bonus = [
   {
     question: "0",
-    selections: ["1", "2", "3", "4"],
-    answer: 1,
+    selections: [
+      "Taco",
+      "Taco, duh.",
+      "Taco, okay?",
+      "All of the [tacos] above",
+    ],
+    answer: 3,
   },
-  {
-    question: "1",
-    selections: ["1", "2", "3", "4"],
-    answer: 0,
-  },
-  {
-    question: "2",
-    selections: ["1", "2", "3", "4"],
-    answer: 0,
-  },
-  // {
-  //   //     question: ,
-  //   //     selections:,
-  //   //     answer:,
-  //   //   },
-  //   //   {
-  //   //     question: ,
-  //   //     selections:,
-  //   //     answer:,
 ];
 
 // question categories merged into a single variable
@@ -185,15 +181,12 @@ function choiceClick(event) {
   var answerKey = allQuestions[questionIndex].answer;
   if (parseInt(choice) === answerKey) {
     // parseInt to convert string to number value; if strictly equal...
-    console.log("yayyyyy"); // ~it worked...~
+    // console.log("yayyyyy"); // ~it worked...~
     // recalls function selectQuestion to bring up the next question in the quiz...
     // ... i.e. presents the following item in allQuestions object array
-    // > no time subtracted <
   } else {
-    console.log("booooo"); // ~it worked...~
-    // next question
+    // console.log("booooo"); // ~it worked...~
     score -= 10;
-    // TO-DO: subtract 10 seconds
   }
   questionIndex++;
   // will run gameOver() function if score <= 0 or if all questions have been answered
