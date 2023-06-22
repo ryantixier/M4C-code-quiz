@@ -6,5 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DU: M4C High Scores</title>
   </head>
-  <body></body>
+  <body>
+    <h1>High Scores!!!</h1>
+    <a href="./index.html"><h3>Return to main page...</h3></a>
+    <ul id="score-list"></ul>
+    <script>
+      var scoresArray = localStorage.getItem("scores");
+      if (scoresArray) {
+        scoresArray = JSON.parse(scoresArray);
+      } else {
+        scoresArray = [];
+      }
+      scoresArray = scoresArray.sort((a, b) => b.score - a.score);
+      for (const scoreObject of scoresArray) {
+        var li = document.createElement("li");
+        li.textContent = `${scoreObject.userInitials}: ${scoreObject.score}`;
+        document.getElementById("score-list").appendChild(li);
+      }
+    </script>
+  </body>
 </html>
