@@ -49,7 +49,7 @@ var definitions = [
     answer: 3,
   },
   {
-    question: "A string can be utilized to repreesent which kind of data?",
+    question: "A string can be utilized to represent which kind of data?",
     selections: [
       "An integer, without quotes",
       "A line of text",
@@ -104,7 +104,7 @@ var syntax = [
 
 var bonus = [
   {
-    question: "0",
+    question: "Taco.",
     selections: [
       "Taco",
       "Taco, duh.",
