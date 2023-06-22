@@ -213,7 +213,6 @@ function gameOver() {
   // hides quiz
   userScore.textContent = score;
 }
-å;
 
 function handleScoreSubmit(event) {
   event.preventDefault();
@@ -232,7 +231,7 @@ function handleScoreSubmit(event) {
   localStorage.setItem("scores", JSON.stringify(scoresArray));
 
   // navigate to highscores.html
-  location.href = "../highscores.html";
+  location.href = "./highscores.html";
 }
 
 //
