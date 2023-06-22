@@ -4,6 +4,12 @@
 
 This (poorly-formatted) application will take you through a code quiz that tests your JavaScript knowledge. There are a set of questions on (1) defitions and on (2) syntax specific to JavaScript, as well as a mystery, bonus question. Upon completion of the quiz, a high-scores form presents itself; enter your name/initials in the input field and click "submit" to be taken to the high-scores page (the high-scores form data is saved to/pulled from localStorage).
 
+### Deployed Site
+
+Click the following link to view the application in your browser, hosted on GitHub Pages:
+
+https://ryantixier.github.io/M4C-code-quiz/
+
 ### Previews:
 
 Home Page
