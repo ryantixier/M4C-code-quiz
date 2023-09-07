@@ -202,7 +202,11 @@ function gameOver() {
   scoreForm.classList.remove("hide");
   // highscores user information form appears to record score
   // hides quiz
-  userScore.textContent = score;
+  if (userScore >= 0) {
+    userScore.textContent = score;
+  } else {
+    userScore.textContent = 0;
+  }
 }
 
 function handleScoreSubmit(event) {
