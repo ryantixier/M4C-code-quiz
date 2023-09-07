@@ -39,19 +39,48 @@
             <h1>Score: <span id="score"></span></h1>
           </div>
           <h2 id="question"></h2>
-          <button type="button" class="btn btn-info" id="0"></button>
-          <button type="button" class="btn btn-info" id="1"></button>
-          <button type="button" class="btn btn-info" id="2"></button>
-          <button type="button" class="btn btn-info" id="3"></button>
+          <button
+            type="button"
+            class="btn btn-info border-top border-bottom"
+            id="0"
+          ></button>
+          <button
+            type="button"
+            class="btn btn-info border-top border-bottom"
+            id="1"
+          ></button>
+          <button
+            type="button"
+            class="btn btn-info border-top border-bottom"
+            id="2"
+          ></button>
+          <button
+            type="button"
+            class="btn btn-info border-top border-bottom"
+            id="3"
+          ></button>
         </div>
       </div>
     </section>
     <section class="hide" id="score-form">
-      <h1>Your score: <span id="user-score"></span></h1>
-      <input type="text" id="user-info" />
-      <button type="button" class="btn btn-success" id="submit-score">
-        Submit
-      </button>
+      <div class="col d-flex justify-content-center">
+        <div class="card">
+          <div class="card-header">
+            <h1>Your score: <span id="user-score"></span></h1>
+          </div>
+          <br />
+          <input
+            type="text"
+            id="user-info"
+            placeholder="Enter Your Name"
+            style="text-align: center"
+          />
+          <br />
+          <button type="button" class="btn btn-success" id="submit-score">
+            Submit
+          </button>
+        </div>
+      </div>
     </section>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
