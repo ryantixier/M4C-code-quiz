@@ -1,3 +1,19 @@
+body {
+  background-color: rgb(21, 52, 41);
+  font: azure;
+}
+
 .hide {
   display: none;
+}
+
+.card {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 80%;
+}
+
+.card-body {
 }

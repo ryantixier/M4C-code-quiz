@@ -96,7 +96,7 @@ var syntax = [
   },
   {
     question:
-      "The code line... var newVariable = ''; ...will create a new variable with the value of...",
+      "The code line... var newVariable = ' '; ...will create a new variable with the value of...",
     selections: ["Numbers 1-9", "The alphabet", "Taco!", "An empty string"],
     answer: 3,
   },
