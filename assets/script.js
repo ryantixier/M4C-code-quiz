@@ -206,6 +206,7 @@ function gameOver() {
     userScore.textContent = score;
   } else {
     userScore.textContent = 0;
+    score = 0;
   }
 }
 
